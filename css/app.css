@@ -1,0 +1,50 @@
+body {
+	background-color: white;
+	font-family: 'Lato';
+	font-size: 12px;
+}
+
+/* ============================================================================ */
+/* Headings */
+h1, h2, h3, thead {
+	font-family: 'Varela Round', 'Lato', 'Sans serif';
+}
+h1, .subtitle {
+	text-align: center;
+}
+h1 {
+	font-size: 42px;
+}
+.subtitle {
+	font-size: 24px;
+}
+/* ============================================================================ */
+/* Elements */
+.container {
+	text-align: center;
+}
+#urlList, #checkMyUrl {
+	display: block;
+}
+#urlList {
+	height: 200px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+#checkMyUrl {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.table-results {
+	margin-top: 30px;
+	font-style: 12px;
+}
+.message {
+	font-weight: bold;
+	padding: 0px 30px 0px 30px;
+}
