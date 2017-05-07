@@ -3,6 +3,7 @@
 Not a developer in real life but like to write some code sometimes.
 Say hello at loic.j.julien@gmail.com
 -->
+<?php require 'php/app.php' ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,14 +31,20 @@ Say hello at loic.j.julien@gmail.com
 	<div class="container">
 		<h1>URL Checker</h1>
 		<h2 class="subtitle">Check URL status in batch in one click</h2>
+		
+		<table id="table-results">
+			<thead>
+				<th class="col-xs-3">URL</th><th class="col-xs-1">Status</th>
+			</thead>
+			<tbody>
+				<?php
+					$data = explode("\n", $_POST['urlList']) ; 
+					scan_url($data)
+				?>
+			</tbody>
+		</table>
 
-
-		<form method="post" action="results.php">
-			<textarea id="urlList" name="urlList">http://stackoverflow.com/questions/13515496/how-to-get-id-of-submit-type-button-when-button-is-pressed-php-html
-https://forum.alsacreations.com/topic-20-32760-1-Resolu-Lignes-textarea-gt-array.html</textarea>
-			<br>
-			<input id="checkMyUrl" type="submit" value="Check My URL" class="btn" />
-		</form>
+		<a href="index.php"><button class="btn" id="back">New check</button></a>
 
 	</div>
 
