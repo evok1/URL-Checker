@@ -12,8 +12,6 @@
 			
 			// Check HTTP header for each URL
 			$headers = get_headers($url) ;
-			print_r($headers) ;
-			echo "<br>";
 			$server_status = $headers[0] ;
 			
 			if (strpos($server_status, '200') !== false) {
