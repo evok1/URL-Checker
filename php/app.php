@@ -1,18 +1,21 @@
 <?php
 	// Get data from text area
-	/*
 	if ($_POST) {	
-		$data = explode("\n", $_POST['urlList']);
+		$data = explode("\n", $_POST['urlList']) ;
 	} else {}
-	*/
 
+	// Main function
 	function scan_url ($data) {
+
 		// Checking HTTP status for each URL
-		$status = array();
 		foreach ($data as $url) {
+			
 			// Check HTTP header for each URL
 			$headers = get_headers($url) ;
+			print_r($headers) ;
+			echo "<br>";
 			$server_status = $headers[0] ;
+			
 			if (strpos($server_status, '200') !== false) {
 				$status[] = '200' ;
 			} elseif (strpos($server_status, '301') !== false) {
@@ -22,7 +25,11 @@
 			} else {
 				$status[] = $headers[0] ;
 			}
+
+			// Pause
+			sleep(5) ;
 		}
+
 		// Creating table from data & status
 		foreach (array_combine($data, $status) as $data => $status) {
 			echo '<tr><td>',$data,'</td><td>',$status,'</td></tr>' ;
