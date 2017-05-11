@@ -33,8 +33,7 @@ Say hello at loic.j.julien@gmail.com
 
 
 		<form method="post" action="results.php">
-			<textarea id="urlList" name="urlList">http://stackoverflow.com/questions/13515496/how-to-get-id-of-submit-type-button-when-button-is-pressed-php-html
-https://forum.alsacreations.com/topic-20-32760-1-Resolu-Lignes-textarea-gt-array.html</textarea>
+			<textarea id="urlList" name="urlList"></textarea>
 			<br>
 			<input id="checkMyUrl" type="submit" value="Check My URL" class="btn" />
 		</form>

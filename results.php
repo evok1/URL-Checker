@@ -38,8 +38,9 @@ Say hello at loic.j.julien@gmail.com
 			</thead>
 			<tbody>
 				<?php
-					$data = explode("\n", $_POST['urlList']) ; 
-					scan_url($data)
+					$data = explode("\r", $_POST['urlList']) ;
+					// scan_url($data) ;
+					scan_url2($data) ;
 				?>
 			</tbody>
 		</table>
